@@ -22,9 +22,7 @@ export default function Home({ puzzles }: { readonly puzzles: Puzzle[] }) {
       <Head>
         <title>Nemograms</title>
       </Head>
-      <div>
-        <PuzzleCardList puzzles={puzzles} />
-      </div>
+      <PuzzleCardList puzzles={puzzles} />
     </>
   );
 }

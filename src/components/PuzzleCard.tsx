@@ -8,11 +8,13 @@ export default function PuzzleCard({ puzzle }: Readonly<{ puzzle: Puzzle }>) {
     puzzle.completed && "solution" in puzzle ? puzzle.solution : "🧩";
 
   return (
-    <Link href={`/puzzles/${id}`}>
-      <div>{image}</div>
-      <h3>{title}</h3>
+    <Link className="puzzle-card" href={`/puzzles/${id}`}>
+      <div className="puzzle-card-img">{image}</div>
       <div>
-        {width}x{height}
+        <h3>{title}</h3>
+        <div>
+          {width}x{height}
+        </div>
       </div>
     </Link>
   );
